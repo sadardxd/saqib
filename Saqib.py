@@ -448,16 +448,11 @@ def cek_apk(session,coki):
 		else:
 			print(f'\r')
 def follow(ses,coki):
-
     ses.headers.update({"accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"})
-
     r = sop(ses.get('https://mbasic.facebook.com/profile.php?id=100000549325847', cookies={'cookie': coki}).text, 'html.parser')
-
     get = r.find('a', string='Follow').get('href')
-
     ses.get(('https://mbasic.facebook.com' + str(get)), cookies={'cookie': coki}).text
-
-
+	
 def method1():
 	user=[]
 	os.system('clear');print(logo)
